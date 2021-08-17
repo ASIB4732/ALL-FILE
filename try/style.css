@@ -1,0 +1,36 @@
+
+
+body{
+    padding: 100px;
+}
+
+.submit-area{
+    margin-top: 50px;
+    padding: 40px;
+    box-shadow: 7px 7px 30px gray;
+    border-radius: 10px;
+
+}
+#asibur-rahman{
+    display: none;
+}
+
+
+
+.status{
+    margin: 0 20px;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+.Deposit{
+background-color: rgb(71, 71, 189);
+}
+.Withdrow{
+background-color: lightsalmon;
+}
+.Balance{
+background-color: orange;
+}

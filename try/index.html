@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- First part -->
+<section class="container">
+    <div id="login-area">
+        <h1 class="text-center">Wallcome our bank</h1>
+        <div class="submit-area">
+            <h3>Log in</h3>
+            <input type="email" class="form-control" placeholder="Enter your email">
+            <br>
+            <input type="password" class="form-control" placeholder="Enter your password">
+            <br>
+            <button id="enterButton" class="btn btn-success">Enter</button>
+        </div>
+    </div>
+</section>
+
+<!-- sacund part -->
+
+
+<section class="container"  id="asibur-rahman">
+    <div class="row">
+        <div class="col-md-4">
+          <div class="Deposit status">
+            <h4>Deposit</h4>
+            <h2>$ <span  id="corentdeposit">00</span></h2>
+          </div>
+        </div>
+        <div class="col-md-4">
+           <div class="Withdrow status">
+            <h4>Withdrow</h4>
+            <h2>$ <span id="correntnumberofwithdrow">00</span></h2>
+           </div>
+        </div>
+        <div class="col-md-4">
+          <div class="Balance status">
+            <h4>Balance</h4>
+            <h2>$ <span id="totalbalance">15000</span></h2>
+          </div>
+        </div>
+    </div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="submit-area">
+            <h4>Deposit</h4>
+            <input id="depositamount" class="form-control" type="number" placeholder="$amount went you deposit">
+            <br>
+            <button id="addDeposit" class="btn btn-success">Deposit</button>
+        </div>
+
+    </div>
+    <div class="col-md-6">
+        <div class="submit-area">
+            <h4>Withdrow</h4>
+            <input id="withdroramount"  class="form-control" type="number" placeholder="$ amount went you withdrow">
+            <br>
+            <button id="removeWithdrow" class="btn btn-success">Withdrow</button>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<script> 
+    // lon in control area
+    document.getElementById('enterButton').addEventListener('click',function(){
+        console.log('this parson chick me');
+        let displsystyle=document.getElementById('login-area');
+        displsystyle.style.display='none'
+        let asibAdd =document.getElementById('asibur-rahman');
+        asibAdd.style.display='block'
+    })
+
+
+    //  Deposit area...................
+     
+    document.getElementById('addDeposit').addEventListener('click',function(){
+        let depositamount=document.getElementById('depositamount').value;
+        let depositNumber =parseFloat(depositamount);
+
+
+
+      document.getElementById('depositamount').value="";
+
+
+      updatespentext("corentdeposit",depositNumber);
+      updatespentext("totalbalance",depositNumber);
+      
+
+
+    })
+ 
+    function updatespentext(id,depositNumber){
+        let current=document.getElementById(id).innerText;
+      let currentNumber=parseFloat(current);
+      let totalAmount=currentNumber+depositNumber;
+      document.getElementById(id).innerText=totalAmount;
+    }
+
+// Withdrow area ........................
+
+document.getElementById('removeWithdrow').addEventListener('click', function(){
+
+  let withdroramount =document.getElementById('withdroramount').value;
+  let withdrownumber =parseFloat(withdroramount)
+
+ 
+  document.getElementById('withdroramount').value="";
+
+
+  updatewithdrowfuntion('totalbalance',withdrownumber);
+
+   updatespentext("correntnumberofwithdrow",withdrownumber)
+
+
+})
+function updatewithdrowfuntion(id,withdrownumber){
+   let currentwithdrow =document.getElementById(id).innerText;
+   let totalwithdrowNumber =parseFloat(currentwithdrow);
+   let totalmony=totalwithdrowNumber-withdrownumber;
+   document.getElementById(id).innerText=totalmony;
+}
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>

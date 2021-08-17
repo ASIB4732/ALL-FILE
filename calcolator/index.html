@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- <div class="col-md-6">
+                <div class="pin-generator half-width">
+                    <input id="randomNumberInput" class="form-control" type="text">
+                    <button id="randomNumber" class="generate-btn">Generate Pin</button>
+                </div>
+            </div> -->
+            <div class="col-md-6">
+                <div class="input-section half-width">
+                  <input id="scrien" class="form-control" type="text">
+                    <div class="numbers">
+                        <div class="calc-body">
+                            <div class="calc-button-row">
+                              <div class="button">
+                                  <button id="xxx"><span id="savenbutton">7</span></button>
+                              </div>
+                              <div class="button">
+                                <button><span id="eightbutton">8</span></button>
+                              </div>
+                              <div class="button">
+                                <button><span id="ninebutton">9</span></button>
+                              </div>
+                            </div>
+                            <div class="calc-button-row">
+                              <div class="button">
+                                <button><span id="fourbutton">4</span></button>
+                              </div>
+                              <div class="button">
+                                <button><span id="fivebutton">5</span></button>
+                              </div>
+                              <div class="button">
+                                <button><span id="sixbutton">6</span></button>
+                              </div>
+                            </div>
+                            <div class="calc-button-row">
+                              <div class="button">
+                                <button><span id="onebutton">1</span></button>
+                              </div>
+                              <div class="button">
+                                <button><span id="townutton">2</span></button>
+                              </div>
+                              <div class="button">
+                                <button><span id="threebutton">3</span></button>
+                              </div>
+                            </div>
+                            <div class="calc-button-row">
+                                <div class="button">
+                                  <button><span id="lasdenbutton"><</span></button>
+                                </div>
+                                <div class="button">
+                                  <button><span id="zerobutton">0</span></button>
+                                </div>
+                                <div class="button">
+                                  <button><span id="clenbutton">c</span></button>
+                                </div>
+                            </div>
+                            <div>
+                                <button id="submitButton"  type="submit" class="submit-btn">Submit</button>
+                                <p class="action-left">3 try left</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+<script>
+
+
+document.getElementById('randomNumber').addEventListener('click', function(){
+
+var randomnumber =Math.random()*10000;
+var randomoutput=Math.round(randomnumber);
+document.getElementById('randomNumberInput').value=randomoutput;
+})
+
+
+
+
+
+
+allNumberButton('savenbutton')
+allNumberButton("eightbutton")
+allNumberButton('ninebutton')
+allNumberButton('fourbutton')
+allNumberButton('fivebutton')
+allNumberButton('sixbutton')
+allNumberButton('onebutton')
+allNumberButton("townutton")
+allNumberButton('threebutton')
+allNumberButton("lasdenbutton")
+allNumberButton("zerobutton")
+allNumberButton("clenbutton")
+
+// function allnumber(button){
+//   document.getElementById(button).addEventListener('click' ,fu)
+// }
+function allNumberButton(button){
+document.getElementById(button).addEventListener('click', function(){
+
+let allButton =document.getElementById(button).innerText;
+let allNumber =parseFloat(allButton);
+
+document.getElementById('scrien').value=allNumber;
+})
+
+
+
+</script>
+</body>
+</html>

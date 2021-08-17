@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Shopping Cart</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
+   <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+   <section>
+      <div class="container">
+         <div class="cart">
+            <div class="col-md-12 col-lg-10 mx-auto">
+               <div class="cart-item">
+                  <div class="row">
+                     <div class="col-md-7 center-item">
+                        <img src="images/product-1.png" alt="">
+                        <h5>iPhone 11 128GB Black</h5>
+                     </div>
+
+                     <div class="col-md-5 center-item">
+                        <div class="input-group number-spinner">
+                           <button id="removeMobile" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input id="numberOfproduct" type="text" class="form-control text-center" value="1">
+                           <button id="plasbutton" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <h5>$ <span id="mobilr mony"><span id="phonemony">1250</span></span></h5>
+                        <img src="images/remove.png" alt="" class="remove-item">
+                     </div>
+                  </div>
+               </div>
+
+               <div class="cart-item">
+                  <div class="row">
+                     <div class="col-md-7 center-item mx-auto">
+                        <img src="images/product-2.png" alt="">
+                        <h5>iPhone 11 Silicone Case - Black</h5>
+                     </div>
+                     <div class="col-md-5 center-item">
+                        <div class="input-group number-spinner">
+                           <button id="casenagativeButton" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input id="inputofcaching" type="text" class="form-control text-center" value="1">
+                           <button id="plasbuttonsacund" class="btn btn-default"><i class="fas fa-plus"></i></button>
+
+                        </div>
+                        <h5>$ <span id="chachingprice">59</span></h5>
+                        <img src="images/remove.png" alt="" class="remove-item">
+                     </div>
+                  </div>
+               </div>
+
+               <div class="cart-item">
+                  <div class="row">
+
+                     <div class="col-md-8">
+                        <h5>Subtotal: </h5>
+                        <h5>Tax:</h5>
+                        <h5>Total:</h5>
+                     </div>
+
+                     <div class="col-md-4 status">
+                        <h5>$ <span id="subtotalid">1309</span></h5>
+                        <h5>$0</h5>
+                        <h5>$ <span id="totalDoler">1309</span></h5>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-12 pt-4 pb-4">
+                  <button type="button" class="btn btn-success check-out"><a href="https://asib4732.github.io/Pioneer-Back/">Check Out</a></button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+
+
+   <script>
+
+
+      functionadd('plasbutton','numberOfproduct')
+      functionadd('plasbuttonsacund','inputofcaching')
+
+
+      function functionadd(x,y) {
+         document.getElementById(x).addEventListener('click',function(){
+         let plasid=document.getElementById(y).value;
+        let plasnum =parseFloat(plasid);
+        let add =plasnum +1;
+        document.getElementById(y).value=add;
+      })
+      }
+
+
+      functionremove('removeMobile','numberOfproduct')
+      functionremove('casenagativeButton','inputofcaching')
+
+      function functionremove(x,y) {
+         document.getElementById(x).addEventListener('click',function(){
+         let plasid=document.getElementById(y).value;
+        let plasnum =parseFloat(plasid);
+        let remove =plasnum -1;
+        document.getElementById(y).value=remove;
+      })
+      }
+
+
+
+
+
+
+
+
+
+
+
+      
+      totalAmountCount('plasbutton','subtotalid',1250)
+      totalAmountCount('plasbutton','phonemony',1250)
+      totalAmountCount('plasbutton','totalDoler',1250)
+      totalAmountCount('plasbuttonsacund','subtotalid',59)
+      totalAmountCount('plasbuttonsacund','chachingprice',59)
+      totalAmountCount('plasbuttonsacund','totalDoler',59)
+
+
+
+      function totalAmountCount(a,b,c){
+         document.getElementById(a).addEventListener('click',function(){
+         let subtotal =document.getElementById(b).innerText;
+         let addsubtotal =parseFloat(subtotal);
+         let result=addsubtotal+c;
+         document.getElementById(b).innerText=result;
+      })
+      }
+
+
+      totalAmountremove('removeMobile','subtotalid',1250)
+      totalAmountremove('removeMobile','phonemony',1250)
+      totalAmountremove('removeMobile','totalDoler',1250)
+      totalAmountremove('casenagativeButton','subtotalid',59)
+      totalAmountremove('casenagativeButton','phonemony',59)
+      totalAmountremove('casenagativeButton','totalDoler',59)
+
+
+      function totalAmountremove(a,b,c){
+         document.getElementById(a).addEventListener('click',function(){
+         let subtotal =document.getElementById(b).innerText;
+         let addsubtotal =parseFloat(subtotal);
+         let result=addsubtotal-c;
+         document.getElementById(b).innerText=result;
+      })
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+   </script>
+</body>
+
+</html>
