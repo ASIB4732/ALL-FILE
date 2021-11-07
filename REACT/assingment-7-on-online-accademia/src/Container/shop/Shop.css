@@ -1,0 +1,11 @@
+.shop{
+    display: flex;
+}
+.product{
+    width: 65%;
+    margin-left: 60px;
+    margin-right: 7px;
+}
+.card{
+    border-left: 3px solid white;
+}

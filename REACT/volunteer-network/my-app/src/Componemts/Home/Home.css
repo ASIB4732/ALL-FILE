@@ -1,0 +1,45 @@
+.margin1{
+    margin-top: 35px;
+}
+.margin2{
+    margin-top: 20px;
+}
+.Search{
+    color: white;
+    background-color: rgb(68, 82, 211);
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+
+.box img{
+    width: 100%;
+    margin-top: 10px;
+    
+}
+.box p{
+  background-color:rgb(97, 73, 22);
+  height: 70px;
+  text-align: center;
+}
+
+.box1{
+    border-right: 3px solid lightblue;
+}
+.box{
+    margin-top: 10px;
+    border-bottom:3px solid lightblue ;
+}
+
+.borderRadusimg{
+    border-radius:  10px 10px 0 0;
+}
+.borderRadus{
+    border-radius:  0 0 10px 10px;
+}
+.box a{
+    text-decoration: none;
+    color: white;
+}
+.bor{
+    width: 200px;
+}

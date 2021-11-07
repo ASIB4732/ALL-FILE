@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+  margin-top: 20px;
+  background-color: lightgrey;
+}
+.uaerId{
+  border: 5px solid lightblue;
+  margin: 50px;
+  background-color: white;
+}
+.uaerId img{
+  margin-top: 10px;
+  border:4px solid rgb(108, 4, 134);
+}
+
